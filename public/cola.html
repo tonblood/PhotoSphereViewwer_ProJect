@@ -42,11 +42,17 @@
           
             <p><strong>วิทยาลัยการปกครองท้องถิ่น มหาวิทยาลัยขอนแก่น</strong> เป็นส่วนราชการไทยระดับวิทยาลัย สังกัดมหาวิทยาลัยขอนแก่น กระทรวงศึกษาธิการ โอนย้ายมาจากคณะมนุษยศาสตร์และสังคมศาสตร์ โดยมีฐานะเป็นองค์กรในกำกับมหาวิทยาลัย ตามข้อบังคับมหาวิทยาลัยขอนแก่น ว่าด้วยองค์กรในกำกับมหาวิทยาลัยขอนแก่น พ.ศ. 2539 ที่มีการจัดการเป็นอิสระจากระบบราชการ พึ่งตนเองได้ และให้ขึ้นอยู่ภายใต้การดูแลกำกับของมหาวิทยาลัยขอนแก่น มีลักษณะเทียบเท่าคณะ มีหน้าที่บริหาร จัดการ ดำเนินงาน และรับผิดชอบในการผลิตบัณฑิตในหลักสูตรต่างๆ ภายใต้ความร่วมมือระหว่างมหาวิทยาลัยขอนแก่น และกรมส่งเสริมการปกครองท้องถิ่น กระทรวงมหาดไทย</p>
         </script>
+        <script type="text/template" id="plant">
+            <h1>ต้นพลูด่างยักษ์</h1>
+          
+            <p><strong>ต้นพลูด่างยักษ์</strong> ใบอ่อนมีรูปไข่ ใบที่เจริญเต็มที่มีรูปหัวใจ มีลายด่างสีเหลืองหรือสีเขียวสม่ำเสมอ บางครั้งอาจพบลายด่างสีขาว สีเขียว สีเหลือง คล้ายพลูด่างลายหินอ่อน แต่มีขนาดใหญ่กว่า พันธุ์นี้มีใบ และลำต้นมีขนาดใหญ่กว่าทุกพันธุ์ ผิวใบเป็นคลื่น ลำต้นโตเต็มที่สูงได้มากกว่า 15 เมตร นิยมปลูกในแปลงจัดสวนหรือปลูกอิงต้นไม้ใหญ่ เนื่องจากมีลำต้นยาวมาก</p>
+        </script>
+
 
         <script>
             var viewer = new PhotoSphereViewer.Viewer({
                 container: document.querySelector('#viewer'),
-                panorama: 'img/COLA.jpg',
+                panorama: 'img/COLA2.jpg',
                 plugins: [
                     [PhotoSphereViewer.MarkersPlugin, {
                         // list of markers
@@ -74,6 +80,41 @@
                                     "content": "ลานจอดรถ",
                                     "position": "top center"
                                 }
+                            },
+                            {
+                                "id": "marker-8a87kbm1oty",
+                                "image": "https://photo-sphere-viewer.js.org/assets/pin-red.png",
+                                "longitude": 5.849,
+                                "latitude": -0.254,
+                                "width": 32,
+                                "height": 32,
+                                "tooltip": {
+                                    "content": "ลานจอดรถ",
+                                    "position": "top center"
+                                }
+                            },
+                            {
+                                "id": "marker-ea19gpjj3vs",
+                                "image": "https://photo-sphere-viewer.js.org/assets/pin-red.png",
+                                "longitude": 1.762,
+                                "latitude": 0.016,
+                                "width": 32,
+                                "height": 32,
+                                "tooltip": {
+                                    "content": "ทางไปขงจื๊อ",
+                                    "position": "top center"
+                                }
+                            },
+                            {
+                                id: 'marker-7w9rdgjh303',
+                                longitude: 6.156,
+                                latitude: 0.121,
+                                image: 'img/pin_02.png',
+                                width: 32,
+                                height: 32,
+                                anchor: 'bottom center',
+                                tooltip: 'พลูด่างยักษ์<b>เพิ่มเติม!</b>',
+                                content: document.getElementById('plant').innerHTML
                             }
                         ]
                     }]
