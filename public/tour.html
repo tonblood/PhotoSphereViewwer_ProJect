@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/plugins/markers.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/plugins/virtual-tour.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
@@ -19,7 +20,67 @@
 </head>
 <style>
     body {
-        background-color: burlywood;
+        margin: 0;
+        padding: 0;
+        font-family: "arial", heletica, sans-serif;
+        font-size: 12px;
+        background: #2980b9 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
+        -webkit-animation: 10s linear 0s normal none infinite animate;
+        -moz-animation: 10s linear 0s normal none infinite animate;
+        -ms-animation: 10s linear 0s normal none infinite animate;
+        -o-animation: 10s linear 0s normal none infinite animate;
+        animation: 10s linear 0s normal none infinite animate;
+
+    }
+
+    @-webkit-keyframes animate {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 500px 0;
+        }
+    }
+
+    @-moz-keyframes animate {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 500px 0;
+        }
+    }
+
+    @-ms-keyframes animate {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 500px 0;
+        }
+    }
+
+    @-o-keyframes animate {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 500px 0;
+        }
+    }
+
+    @keyframes animate {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 500px 0;
+        }
     }
 
     .cover-container {
@@ -78,18 +139,7 @@
                         { nodeId: '2' },
                     ],
                     markers: [
-                        {
-                            "id": "marker-ea19gpjj3vs",
-                            "image": "https://photo-sphere-viewer.js.org/assets/pin-red.png",
-                            "longitude": 1.762,
-                            "latitude": 0.016,
-                            "width": 32,
-                            "height": 32,
-                            "tooltip": {
-                                "content": "ทางไปขงจื๊อ",
-                                "position": "top center"
-                            }
-                        },
+
                         {
                             id: 'image',
                             longitude: 4.963,
@@ -126,6 +176,18 @@
                             }
                         },
                         {
+                            "id": "marker-ea19gpjj3vs",
+                            "image": "https://photo-sphere-viewer.js.org/assets/pin-blue.png",
+                            "longitude": 1.762,
+                            "latitude": 0.016,
+                            "width": 32,
+                            "height": 32,
+                            "tooltip": {
+                                "content": "ทางไปขงจื๊อ",
+                                "position": "top center"
+                            }
+                        },
+                        {
                             id: 'marker-7w9rdgjh303',
                             longitude: 6.156,
                             latitude: 0.121,
@@ -148,16 +210,7 @@
                         { nodeId: '1' },
                     ],
                     markers: [
-                        {
-                            "id": "go",
-                            "image": "img/pin03.png",
-                            "longitude": 5.284,
-                            "latitude": -0.036,
-                            "width": 32,
-                            "height": 32,
-                            "tooltip": "อาคารเรียนรวมและพัฒนาทักษะพื้นฐาน",
-                            "content": '<h2>อาคารเรียนรวมและพัฒนาทักษะพื้นฐาน</h2>' + '<a class="btn btn-primary" href="GE.html">ไปทางนี้</a>'
-                        },
+
                         {
                             "id": "marker-02",
                             "image": "img/pin03.png",
@@ -167,6 +220,16 @@
                             "height": 32,
                             "tooltip": "สถาบันขงจื่อ",
                             "content": '<h2>สถาบันขงจื่อ มหาวิทยาลัยขอนแก่น</h2>' + '<p> เป็นศูนย์กลางการให้การศึกษาและบริการวิชาการด้านภาษาและวัฒนธรรมจีนที่สำคัญของประเทศและภูมิภาคเอเซีย</p>' + '<img src="img/con.jpg" width="350px">'
+                        },
+                        {
+                            "id": "go",
+                            "image": "img/pin03.png",
+                            "longitude": 5.284,
+                            "latitude": -0.036,
+                            "width": 32,
+                            "height": 32,
+                            "tooltip": "อาคารเรียนรวมและพัฒนาทักษะพื้นฐาน",
+                            "content": '<h2>อาคารเรียนรวมและพัฒนาทักษะพื้นฐาน</h2>'
                         },
                         {
                             "id": "marker-03",
@@ -283,6 +346,16 @@
                             "content": '<h1>ร้านสะดวกซื้อ</h1>' + "ตั้งอยู่บริเวณข้างๆคณะมนุษยศาสตร์และสังคมศาสตร์ภายในร้านมีของให้ซื้อมากมายไม่ว่าจะเป็นอาหารเครื่องดื่ม เวลาเร่งรีบสามารถมาซื้อได้เล้ยยยยย " + '<br>' + '<img src="img/seven01.png" width="350px" style="margin-top: 30px;">',
                         },
                         {
+                            "id": "marker04",
+                            "image": "img/pin.png",
+                            "longitude": 2.453,
+                            "latitude": 0.102,
+                            "width": 50,
+                            "height": 50,
+                            "tooltip": "ตึก GE",
+                            "content": '<h1>ตึก GE หรืออาคารเรียนรวม</h1>' + "จะเป็นตึกสำหรับใช้เรียนวิชาศึกษาทั่วไปนั่นเอง " + '<a class="btn btn-primary" href="GE.html">ไปตึก GE</a>',
+                        },
+                        {
                             "id": "marker02",
                             "image": "img/pin.png",
                             "longitude": 0.549,
@@ -302,16 +375,7 @@
                             "tooltip": "ร้านกาแฟ Black Angel",
                             "content": '<h1>ร้านกาแฟ Black Angel</h1>' + "เป็นร้านกาแฟแบบ Self Service คือลูกค้าต้องบริการตนเองภายในร้านไม่มีพนักงาน มีเพียงพ่อค้าที่คอยทำกาแฟตามเมนูที่ลูกค้าจดบิลไว้ ราคาของกาแฟย่อมเยาเข้าถึงได้ แต่วิวและบรรยากาศที่ได้ไม่ย่อมเยาเหมือนราคาเลย" + '<br>' + '<img src="img/cafe.jpg" width="350px" style="margin-top: 30px;">' + '<a class="btn btn-primary" href="CoffeeStore.html">เข้าร้านกาแฟ</a>',
                         },
-                        {
-                            "id": "marker04",
-                            "image": "img/pin.png",
-                            "longitude": 2.453,
-                            "latitude": 0.102,
-                            "width": 50,
-                            "height": 50,
-                            "tooltip": "ตึก GE",
-                            "content": '<h1>ตึก GE หรืออาคารเรียนรวม</h1>' + "จะเป็นตึกสำหรับใช้เรียนวิชาศึกษาทั่วไปนั่นเอง " + '<a class="btn btn-primary" href="GE.html">ไปตึก GE</a>',
-                        },
+
                         {
                             "id": "marker05",
                             "image": "img/pin.png",
@@ -373,7 +437,7 @@
                             "width": 32,
                             "height": 32,
                             "tooltip": "ทางเข้า-ออกร้าน",
-                            "content": "<h2>ทางเข้า-ออกร้าน</h2>" + "<p>ทำจากหิน นำมาเรียงกัน ดูเข้ากับการตกแต่งของร้าน แต่ต้องระวังตอนหน้าฝน ตระใคร่จะขึ้น อาจทำให้ลื่นจนเกิดอุบัติเหตุได้</p>" + '<img src="img/opened.jpg" width="350px">' + '<a class="btn btn-primary" href="seven.html">ไปทางนี้</a>'
+                            "content": "<h2>ทางเข้า-ออกร้าน</h2>" + "<p>ทำจากหิน นำมาเรียงกัน ดูเข้ากับการตกแต่งของร้าน แต่ต้องระวังตอนหน้าฝน ตระใคร่จะขึ้น อาจทำให้ลื่นจนเกิดอุบัติเหตุได้</p>" + '<img src="img/opened.jpg" width="350px">'
                         },
                         {
                             "id": "store",
@@ -393,9 +457,12 @@
         </script>
     </div>
     <div class="text-center">
-        <br>
-        <a href="index.html" class="btn btn-success">BACK</a>
-        <td></td>
+        <p></p>
+        <td>สมาชิกในกลุ่ม : ควีนัม</td><br>
+        รหัส 623020461-0&nbsp;นางสาวกัญญาณัฐ ใสปาน<br>
+        รหัส 623020472-5&nbsp;นายธนโชติ เตชะศิริธนะกุล<br>
+        รหัส 623020505-6&nbsp;นายอภิชาติ มูลวันดี<br>
+        รหัส 623021011-6&nbsp;นายกฤตเมธ ศิริสุนทร</td>
     </div>
 </body>
 
